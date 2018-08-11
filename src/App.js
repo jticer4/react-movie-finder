@@ -11,21 +11,28 @@ class App extends Component {
 			{id: 0, title: "Mean Girls", overview: "some filler text!!!"},
 			{id: 1, title: "Infinity War", overview: "the ending is so sad :("}
 		]
-		//add "rows" to my state value in order to display the movie data
-		this.state = {
-			rows: [
-				<p key="1">This is my row0</p>,
-				<p key="2">This is my row1</p>,
-				<p key="3">This is my row2</p>
-			]
-		}
+
 
 		//holds my array of movies
 		var movieRows = []
 
 		//for each movie in the movies array add it to the movieRows array
 		movies.forEach((movie) => {
-			movieRows.push(<p key={movie.id}>{movie.title}</p>)
+			//movieRow will contain the movie data for each row in order to format it correctly
+			const movieRow = <table key={movie.id}>
+				<tbody>
+				<tr>
+					<td>
+						<img src="" alt="poster"/>
+					</td>
+					<td>
+						{movie.title}
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			//push each movieRow onto the movieRows array
+			movieRows.push(movieRow)
 		})
 
 		//assign the movieRows array to the rows state variable
