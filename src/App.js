@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import MovieRow from './MovieRow.js'
 
 class App extends Component {
 	constructor(props) {
@@ -18,6 +19,8 @@ class App extends Component {
 
 		//for each movie in the movies array add it to the movieRows array
 		movies.forEach((movie) => {
+			const movieRow = <MovieRow/>
+			/*
 			//movieRow will contain the movie data for each row in order to format it correctly
 			const movieRow = <table key={movie.id}>
 				<tbody>
@@ -33,6 +36,7 @@ class App extends Component {
 				</tr>
 				</tbody>
 			</table>
+			*/
 			//push each movieRow onto the movieRows array
 			movieRows.push(movieRow)
 		})
