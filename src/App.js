@@ -5,6 +5,7 @@ class App extends Component {
 	constructor(props) {
 		super(props)
 		console.log("this is my initializer")
+
 		//my array of dummy data
 		const movies = [
 			{id: 0, title: "Mean Girls", overview: "some filler text!!!"},
@@ -18,6 +19,17 @@ class App extends Component {
 				<p key="3">This is my row2</p>
 			]
 		}
+
+		//holds my array of movies
+		var movieRows = []
+
+		//for each movie in the movies array add it to the movieRows array
+		movies.forEach((movie) => {
+			movieRows.push(<p key={movie.id}>{movie.title}</p>)
+		})
+
+		//assign the movieRows array to the rows state variable
+		this.state = {rows: movieRows}
 	}
 
 
