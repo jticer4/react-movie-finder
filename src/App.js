@@ -8,8 +8,8 @@ class App extends Component {
 
 		//my array of dummy data
 		const movies = [
-			{id: 0, title: "Mean Girls", overview: "some filler text!!!"},
-			{id: 1, title: "Infinity War", overview: "the ending is so sad :("}
+			{id: 0, poster_src: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/lDlGPZS0UJYKxVlpyff3BMyPc2H.jpg", title: "Mean Girls", overview: "some filler text!!!"},
+			{id: 1, poster_src: "https://image.tmdb.org/t/p/w185_and_h278_bestv2/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg", title: "Infinity War", overview: "the ending is so sad :("}
 		]
 
 
@@ -23,7 +23,7 @@ class App extends Component {
 				<tbody>
 				<tr>
 					<td>
-						<img src="" alt="poster"/>
+						<img src={movie.poster_src} width="100" alt="poster"/>
 					</td>
 					<td>
 						{movie.title}
