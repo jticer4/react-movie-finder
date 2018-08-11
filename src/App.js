@@ -2,6 +2,25 @@ import React, {Component} from 'react';
 import './App.css';
 
 class App extends Component {
+	constructor(props) {
+		super(props)
+		console.log("this is my initializer")
+		//my array of dummy data
+		const movies = [
+			{id: 0, title: "Mean Girls", overview: "some filler text!!!"},
+			{id: 1, title: "Infinity War", overview: "the ending is so sad :("}
+		]
+		//add "rows" to my state value in order to display the movie data
+		this.state = {
+			rows: [
+				<p key="1">This is my row0</p>,
+				<p key="2">This is my row1</p>,
+				<p key="3">This is my row2</p>
+			]
+		}
+	}
+
+
 	render() {
 		return (
 			<div className="App">
@@ -25,8 +44,11 @@ class App extends Component {
 					display: 'block',
 					width: "99%",
 					paddingTop: 8,
-					paddingBottom: 8
+					paddingBottom: 8,
+					paddingLeft: 16
 				}} type="text" placeholder="Enter search term"/>
+
+				{this.state.rows}
 			</div>
 		);
 	}
