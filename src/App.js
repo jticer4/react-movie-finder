@@ -19,24 +19,8 @@ class App extends Component {
 
 		//for each movie in the movies array add it to the movieRows array
 		movies.forEach((movie) => {
-			const movieRow = <MovieRow/>
-			/*
-			//movieRow will contain the movie data for each row in order to format it correctly
-			const movieRow = <table key={movie.id}>
-				<tbody>
-				<tr>
-					<td>
-						<img src={movie.poster_src} width="100" alt="poster" style={{
-							paddingRight: 10}}/>
-					</td>
-					<td>
-						{movie.title}
-						<p>{movie.overview}</p>
-					</td>
-				</tr>
-				</tbody>
-			</table>
-			*/
+			const movieRow = <MovieRow movie={movie}/>
+
 			//push each movieRow onto the movieRows array
 			movieRows.push(movieRow)
 		})
