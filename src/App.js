@@ -23,10 +23,12 @@ class App extends Component {
 				<tbody>
 				<tr>
 					<td>
-						<img src={movie.poster_src} width="100" alt="poster"/>
+						<img src={movie.poster_src} width="100" alt="poster" style={{
+							paddingRight: 10}}/>
 					</td>
 					<td>
 						{movie.title}
+						<p>{movie.overview}</p>
 					</td>
 				</tr>
 				</tbody>
@@ -42,7 +44,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="App">
+			<div>
 				<table className="titleBar">
 					<tbody>
 						<tr>
