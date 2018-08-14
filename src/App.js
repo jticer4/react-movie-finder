@@ -5,8 +5,10 @@ import MovieRow from './MovieRow.js'
 class App extends Component {
 	constructor(props) {
 		super(props)
-		console.log("this is my initializer")
-
+		//set the state to an empty object
+		this.state = {}
+		//console.log("this is my initializer")
+/*
 		//my array of dummy data
 		const movies = [
 			{id: 0, poster_src: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/lDlGPZS0UJYKxVlpyff3BMyPc2H.jpg", title: "Mean Girls", overview: "some filler text!!!"},
@@ -26,9 +28,13 @@ class App extends Component {
 		})
 
 		//assign the movieRows array to the rows state variable
-		this.state = {rows: movieRows}
+		this.state = {rows: movieRows}*/
+		this.performSearch()
 	}
 
+	performSearch() {
+		console.log("perform search using movies db")
+	}
 
 	render() {
 		return (
