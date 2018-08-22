@@ -46,7 +46,14 @@ class App extends Component {
 				const results = searchResults.results
 
 				//console log the first result in the response
-				console.log(results[0])
+				//console.log(results[0])
+				var movieRows = []
+				results.forEach((movie) => {
+					console.log(movie.name)
+					const movieRow = <MovieRow movie={movie}/>
+					movieRows.push(movieRow)
+				})
+				this.setState({rows: movieRows})
 			},
 			error: (xhr, status, err) => {
 				console.error("data fetched unsuccessfully")
