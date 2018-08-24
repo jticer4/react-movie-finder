@@ -50,8 +50,8 @@ class App extends Component {
 				var movieRows = []
 				results.forEach((movie) => {
 					movie.poster_src = "http://image.tmdb.org/t/p/w185/" + movie.poster_path
-					//console.log(movie.poster_path)
-					const movieRow = <MovieRow movie={movie}/>
+					//4--di14--diconsole.log(movie.poster_path)
+					const movieRow = <MovieRow key={movie.id} movie={movie}/>
 					movieRows.push(movieRow)
 				})
 				this.setState({rows: movieRows})
