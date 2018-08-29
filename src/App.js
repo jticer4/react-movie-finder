@@ -66,7 +66,8 @@ class App extends Component {
 	searchChangeHandler(event) {
 		console.log(event.target.value)
 		const searchTerm = event.target.value
-		this.performSearch(searchTerm)
+		const boundObject = this
+		boundObject.performSearch(searchTerm)
 	}
 
 	render() {
