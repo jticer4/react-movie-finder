@@ -33,10 +33,10 @@ class App extends Component {
 		this.performSearch()
 	}
 
-	performSearch() {
+	performSearch(searchTerm) {
 		console.log("perform search using movies db")
 		//stores the api key
-		const urlString = "https://api.themoviedb.org/3/search/collection?api_key=d9b5150291e4eb66066d423a4d75f4b7&language=en-US&query=mean+girls&page=1"
+		const urlString = "https://api.themoviedb.org/3/search/collection?api_key=d9b5150291e4eb66066d423a4d75f4b7&language=en-US&page=1&query=" + searchTerm
 		$.ajax({
 			url: urlString,
 			success: (searchResults) => {
