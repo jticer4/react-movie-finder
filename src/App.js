@@ -30,7 +30,7 @@ class App extends Component {
 
 				//assign the movieRows array to the rows state variable
 				this.state = {rows: movieRows}*/
-		this.performSearch()
+		this.performSearch("ant man")
 	}
 
 	performSearch(searchTerm) {
@@ -62,7 +62,14 @@ class App extends Component {
 		})
 	}
 
+
+	searchChangeHandler(event) {
+		console.log(event.target.value)
+	}
+
 	render() {
+
+
 		return (
 			<div>
 				<table className="titleBar">
@@ -87,7 +94,7 @@ class App extends Component {
 					paddingTop: 8,
 					paddingBottom: 8,
 					paddingLeft: 16
-				}} type="text" placeholder="Enter search term"/>
+				}} onChange={this.searchChangeHandler} type="text" placeholder="Enter search term"/>
 
 				{this.state.rows}
 			</div>
