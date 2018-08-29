@@ -96,7 +96,7 @@ class App extends Component {
 					paddingTop: 8,
 					paddingBottom: 8,
 					paddingLeft: 16
-				}} onChange={this.searchChangeHandler} type="text" placeholder="Enter search term"/>
+				}} onChange={this.searchChangeHandler.bind(this)} type="text" placeholder="Enter search term"/>
 
 				{this.state.rows}
 			</div>
