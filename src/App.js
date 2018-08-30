@@ -88,8 +88,10 @@ class App extends Component {
 								<h1>MoviesDB Search</h1>
 							</td>
 						</tr>
+
 					</tbody>
 				</table>
+
 				<input style={{
 					fontSize: 24,
 					display: 'block',

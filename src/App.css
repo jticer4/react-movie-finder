@@ -1,7 +1,7 @@
 .titleBar {
-  background-color: #000;
+  background-color: #FF6A70;
   display: block;
-  color: #fff;
+  color: #01d277;
   font-size: 24px;
   padding-left: 16px;
 }
@@ -34,3 +34,4 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
