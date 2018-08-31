@@ -10,7 +10,7 @@ class MovieRow extends React.Component {
 							paddingRight: 10}}/>
 					</td>
 					<td>
-						{this.props.movie.name}
+						<h3>{this.props.movie.name}</h3>
 						<p>{this.props.movie.overview}</p>
 						<input type="button" value="view"/>
 					</td>
