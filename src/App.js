@@ -30,7 +30,7 @@ class App extends Component {
 
 				//assign the movieRows array to the rows state variable
 				this.state = {rows: movieRows}*/
-		this.performSearch("ant man")
+		this.performSearch("")
 	}
 
 	performSearch(searchTerm) {
@@ -79,7 +79,7 @@ class App extends Component {
 					<tbody>
 						<tr>
 							<td>
-								<img width="50"
+								<img width="60"
 									  src="https://www.themoviedb.org/assets/1/v4/logos/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg"
 									  alt="app icon"/>
 							</td>
