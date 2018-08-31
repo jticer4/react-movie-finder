@@ -12,6 +12,7 @@ class MovieRow extends React.Component {
 					<td>
 						{this.props.movie.name}
 						<p>{this.props.movie.overview}</p>
+						<input type="button" value="view"/>
 					</td>
 				</tr>
 			</tbody>
